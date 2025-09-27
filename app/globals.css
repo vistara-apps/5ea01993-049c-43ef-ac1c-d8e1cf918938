@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Professional Finance Theme - Dark Navy + Gold */
+  --color-bg: #0a1628;
+  --color-fg: #f8fafc;
+  --color-accent: #ffd700;
+  --color-surface: #1e293b;
+  --color-neutral: #64748b;
+  --color-primary: #ffd700;
+  --color-secondary: #0ea5e9;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+[data-theme="celo"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --color-accent: #fbcc5c;
+  --color-surface: #1a1a1a;
+  --color-neutral: #666666;
+  --color-primary: #fbcc5c;
+  --color-secondary: #35d07f;
+  --color-success: #35d07f;
+  --color-warning: #fbcc5c;
+  --color-error: #ff6b6b;
+}
+
+[data-theme="solana"] {
+  --color-bg: #1a0d2e;
+  --color-fg: #ffffff;
+  --color-accent: #9945ff;
+  --color-surface: #2d1b4e;
+  --color-neutral: #8b5cf6;
+  --color-primary: #9945ff;
+  --color-secondary: #14f195;
+  --color-success: #14f195;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+}
+
+[data-theme="base"] {
+  --color-bg: #0f172a;
+  --color-fg: #f1f5f9;
+  --color-accent: #0052ff;
+  --color-surface: #1e293b;
+  --color-neutral: #64748b;
+  --color-primary: #0052ff;
+  --color-secondary: #06b6d4;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: #0c1426;
+  --color-fg: #f1f5f9;
+  --color-accent: #0052ff;
+  --color-surface: #1a202c;
+  --color-neutral: #718096;
+  --color-primary: #0052ff;
+  --color-secondary: #00d4aa;
+  --color-success: #00d4aa;
+  --color-warning: #f6ad55;
+  --color-error: #fc8181;
+}
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-fg font-semibold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface bg-opacity-80 backdrop-blur-sm border border-neutral border-opacity-20 rounded-xl;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent to-primary text-bg px-6 py-3 rounded-lg font-medium hover:shadow-glow transition-all duration-200 shadow-lg hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-fg border border-neutral border-opacity-30 px-6 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-all duration-200;
+  }
+
+  .metric-card {
+    @apply glass-card p-6 hover:bg-opacity-90 transition-all duration-200 hover:shadow-glow;
+  }
+
+  .prize-glow {
+    @apply shadow-glow animate-pulse-glow;
+  }
+
+  .nav-link {
+    @apply text-neutral hover:text-accent transition-colors duration-200 font-medium;
+  }
+
+  .status-active {
+    @apply bg-success bg-opacity-20 text-success border border-success border-opacity-30 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .status-completed {
+    @apply bg-primary bg-opacity-20 text-primary border border-primary border-opacity-30 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .status-pending {
+    @apply bg-warning bg-opacity-20 text-warning border border-warning border-opacity-30 px-3 py-1 rounded-full text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(90deg, var(--color-accent), var(--color-primary)) 1;
+  }
+}
