@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "FairChain Draws",
+    "subtitle": "Built with Zara",
+    "description": "FairChain Draws is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app",
+    "splashImageUrl": "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app/image.png",
+    "tagline": "FairChain Draws",
+    "screenshotUrls": [
+      "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app/screenshot.png",
+      "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://5ea01993049c43efac1cd8e1cf918938-g33g.vercel.app/api/webhook"
+  }
+}
